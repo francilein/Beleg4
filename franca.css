@@ -1,6 +1,7 @@
 body{
     font-family: arial;
     background-color: azure;
+    margin-bottom: 50px; /* Add bottom margin to prevent footer overlap */
 }
 h1{
     color: darkblue;
@@ -76,6 +77,7 @@ footer{
     bottom: 0;
     left: 0;
     width: 100%;
+    margin-top: 50px;
 }
 .container {
     display: flex;
