@@ -1,8 +1,7 @@
 body{
     font-family: arial;
     background-color: azure;
-    margin-bottom: 50px; /* Add bottom margin to prevent footer overlap */
-    margin-right: 300px;
+    margin-bottom: 50px;
 }
 h1{
     color: darkblue;
@@ -16,15 +15,16 @@ header{
     margin: 10px;;
     
 }
-aside {
-    position: fixed;
+.aside {
+    position: absolute;
     right: 0;
-    top: 0;
-    width: 250px;
-    height: 100%;
+    top: 30%;
+    width: 15vw;
+    height: 80%;
     background-color: #f4f4f4;
     padding: 20px;
     margin-left: 20px;
+    margin-bottom: 100px;
     box-shadow: -2px 0 5px rgba(0,0,0,0.1);
 }
 
@@ -49,10 +49,6 @@ footer{
     bottom: 0;
     left: 0;
     width: 100%;
-}
-body{
-    font-family: arial;
-    background-color: azure;
 }
 p{
     color: darkblue;
