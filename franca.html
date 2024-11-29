@@ -4,53 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Franca Lenz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="franca.css">
 </head>
 <body>
-    <header>
-        <h1>Willkommen auf meiner Webseite</h1>
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Meine Webseiten</h1>
     </header>
-    <nav>
-        <ul id="navigation" >
-            <li class="navigation"><a href="franca.html">Home</a></li>
-            <li class="navigation"> <a href="hobbies.html">Meine Hobbies</a></li>
-            <li class="navigation"><a href="kontakt.html">Contact</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navigation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav"></div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="franca.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hobbies.html">Meine Hobbies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.imn.htwk-leipzig.de/~flenz/">Konzerte 2024</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    <main>
+    <div class="row">
+    <main class="col-md-6 p-4">
         <section>
             <h2>Franca Lenz</h2>
-            <img src="fotos/ .jpg" alt="Profilbild von Franca Lenz" width="200">
+            <img src="fotos/ .jpg" alt="Profilbild von Franca Lenz" class="img-fluid rounded" width="200">
             <p>Hallo! Ich bin Franca Lenz und dies ist meine persönliche Webseite. Hier teile ich meine Hobbies und Interessen.</p>
         </section>
     </main>
-
-    <div class="aside">
+    
+    <section class="col-md-6 p-4">
         <h2>Lebenslauf</h2>
-        <ul>
-            <li><strong>Bildung:</strong>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>Bildung:</strong>
                 <ul>
                     <li>2020-2024: Bachelor in Informatik, Universität XYZ</li>
                     <li>2016-2020: Abitur, Gymnasium ABC</li>
                 </ul>
             </li>
-            <li><strong>Berufserfahrung:</strong>
+            <li class="list-group-item"><strong>Berufserfahrung:</strong>
                 <ul>
                     <li>2023: Praktikum bei Firma DEF</li>
                     <li>2022: Werkstudent bei Firma GHI</li>
                 </ul>
             </li>
-            <li><strong>Fähigkeiten:</strong>
+            <li class="list-group-item"><strong>Fähigkeiten:</strong>
                 <ul>
                     <li>Programmierung: HTML, CSS, JavaScript, Python</li>
                     <li>Sprachen: Deutsch, Englisch</li>
                 </ul>
             </li>
         </ul>
+    </section>
     </div>
-    <footer>
+    <footer class="bg-light text-center py-3 mt-4">
         <p>&copy; 2024 Meine Website</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="franca.js"></script>
 </body>
-<script src="franca.js"></script>
 </html>
