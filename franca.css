@@ -1,3 +1,16 @@
 header{
-    background-color: #A2CFFE;
+    background-color: #F33A6A;
+}
+nav{
+    background-color: #FFC0CB;
+}
+#left{
+    background-color: white;
+}
+#right{
+    background-color: lightcoral;
+}
+h2{
+    background-color: #F33A6A;
+    padding: 1%;
 }

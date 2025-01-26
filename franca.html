@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="franca.css">
 </head>
 <body>
-    <header class="text-white text-center py-3" style="background-color: #A2CFFE;">
+    <header class="text-white text-center py-3">
         <h1>Mein Portfolio</h1>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">MMWP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,24 +34,27 @@
         </div>
     </nav>
     <div class="row">
-    <main class="col-md-6 p-4">
-        <section class="mb-4">
-            <h2>Vorstellung</h2>
-            <div class="row p-4*">
-                <div class="col-md-6 d-flex justify-content-center">
-                    <img src="fotos/IMG_1189.jpeg" alt="Profilbild von Franca Lenz" class="img-fluid rounded" width="200" loading="lazy">
+    <section id="left" class="col-md-8 pr-0">
+            <section class="mb-4 ">
+                <h2 >Profile</h2>
+                <div class="row p-4">
+                    <div >
+                    <p>Ich bin Franca und ich studiere seit Oktober 2023 Medieninformatik an der HTWK Leipzig.
+                        Ich habe schon immer ein großes Interesse an Technik und Informatik gehabt und habe mich deshalb für dieses Studium entschieden.
+                        In meiner Freizeit spiele ich gerne Videospie und bearbeite Videos, dadurch bin ich auf dieses Studium gestoßen.
+                    <br>
+                    <br>
+                        Gearbeitet habe ich bisher noch nicht in der IT-Branche, jedoch habe ich schon einige Praktika absolviert, die mir gezeigt haben, dass ich in diesem Bereich arbeiten möchte.
+                        Programmieren und Webseiten entwickeln sind für mich eine Art kreativ zu sein. Vorallem Webseiten zu gestalten macht mir sehr viel Spaß. 
+                        Meine Mama hat eine Physiotherapiepraxis, in der ich schonmal gearbeitet habe. Für sie habe ich auch eine Webseite erstellt.
+                        <a href="https://www.physio-lenz.de/">Hier</a> kannst du dir die Webseite anschauen.
+                    <br>
+                    <br>
+                        Ich bin sehr gespannt auf die nächsten Jahre und freue mich auf die Herausforderungen, die auf mich zukommen werden.
+                    </p>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                <p>Ich bin <b>Franca Lenz</b> und das ist meine persönliche Webseite.</p>
-                <p>Ich bin 20 Jahre alt und habe am 18.07.2004 Geburtstag</p>
-                <p>Ich studiere seit Oktober 2023 an der HTWK Leipzig Medieninformatik</p>
-                <p>Leipzig ist nicht meine Heimat aber mein neues Zuhause, ich komme aus Hessen.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <section class="col-md-6 p-4">
+            </section>
         <h2>Lebenslauf</h2>
         <ul class="list-group">
             <li class="list-group-item"><strong>Bildung:</strong>
@@ -88,6 +91,7 @@
                     </ul>
                 </ul>
             </li>
+            
             <li class="list-group-item"><strong>Fähigkeiten:</strong>
                 <ul>
                     <li>Programmierung: HTML, CSS, JavaScript, Java, C++, SQL</li>
@@ -103,6 +107,12 @@
                 </ul>
             </li>
         </ul>
+    </section>
+    <section class="col-md-4 p-4" id="right">
+        <div class="d-flex justify-content-center align-items-center">
+            <img src="fotos/IMG_1189.jpeg" alt="Profilbild von Franca Lenz" class="img-fluid rounded" width="200" loading="lazy">
+        </div>
+        <h3 class="text-center">Franca Lenz</h3> 
     </section>
     </div>
     <footer class="bg-light text-center py-3 mt-4">
