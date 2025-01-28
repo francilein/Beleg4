@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout Beispiele</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Aufgabe 2.1 -->
+    <h2>2.1: Bild mit Text daneben</h2>
+    <div class="image-text">
+        <img src="chagtgpt bild.webp" alt="Beispielbild" style="max-width: 400px;">
+        <p>
+            Dieser Text wird rechts neben dem Bild angezeigt. Nach Ende des Bildes wird der Text unterhalb des Bildes
+            fortgeführt.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   
+
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer.
+
+        </p>
+    </div>
+
+    <!-- Aufgabe 2.3 -->
+    <h2>2.3: Blöcke B und C neben dem Bild</h2>
+    <div class="layout">
+        <div class="block">B</div>
+        <div class="image-text">
+            <img src="chagtgpt bild.webp" alt="Beispielbild" style="max-width: 400px;">
+            <p>
+                Dieser Text wird rechts neben dem Bild angezeigt. Nach Ende des Bildes wird der Text unterhalb des Bildes
+                fortgeführt.
+            </p>
+        </div>
+        <div class="block">C</div>
+    </div>
+
+    <!-- Aufgabe 3 -->
+    <h2>3: Flexbox Layout</h2>
+    <div class="flex-container">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+    </div>
+
+    <!-- Aufgabe 4 -->
+    <h2>4.1 & 4.2: Grid Layout mit Anpassung</h2>
+    <div class="grid-container">
+        <p>A</p>
+        <p>B</p>
+        <p>C</p>
+        <p>D</p>
+        <p>E</p>
+        <p>F</p>
+    </div>
+
+    <h2>4.3: 3x3 Grid mit freier Mitte</h2>
+    <div class="grid-container-3x3">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <!-- Leerer Block in der Mitte -->
+        <p></p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.image {
+    width: 200px;
+    height: auto;
+}
+.header {
+    background-color: #3A8D99;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu {
+    min-width: 200px; 
+    background-color: #2C6E49;
+    padding: 10px;
+    flex: 0 0 auto; 
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: block;
+    text-align: left;
+}
+
+.menu a:hover {
+    background-color: #ffc107;
+}
+
+
+.main {
+    background-color: #B5A0D1;
+    padding: 10px;
+    flex: 1; /* Take up the remaining space */
+}
+
+.sidebar {
+    background-color: #F79C42;
+    padding: 10px;
+    flex: 0 0 30% ; /* Subtract the gap from the sidebar width */
+}
+
+.footer {
+    background-color: #F1C6D1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Apply gap between stacked items */
+    }
+
+    .menu, .main, .sidebar {
+        flex: 0 0 100%; /* Make each item take full width */
+    }
+
+    .footer, .header {
+        gap: 10px;
+        width: auto;
+    }
+
+    .sidebar {
+        flex: 0 0 100%; /* Sidebar takes full width on small screens */
+    }
+    .image {
+        width: 100%;
+    }
+}

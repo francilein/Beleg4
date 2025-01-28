@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="text-white text-center py-3">
-        <h1>Mein Portfolio</h1>
+        <h1>Meine Projekte</h1>
     </header>
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">MMWP</a>
@@ -24,7 +24,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="hobbies.html">Meine Hobbies</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="projekte.html">Meine Projekte</a>
                 </li>
                 <li class="nav-item">
@@ -33,7 +33,6 @@
             </ul>
         </div>
     </nav>
-    <h1 class="text-center pt-4">Meine Projekte</h1>
     <section class="row projekt-row mt-4">
         <div class="col-md-12 p-4">
             <h2 class="text-center" style=" border-radius: 3px;">Kniffelspiel in Java</h2>
@@ -54,22 +53,49 @@
     <section class="row projekt-row mt-4">
         <div class="col-md-12 p-4">
             <h2 class="text-center" style="border-radius: 3px;">C++ Mitarbeiterdatenbank</h2>
-            <p class="pt-4 px-4">Dieses Projekt ist ein Java-basiertes Spiel namens Kniffel. Es wurde entwickelt, um die grundlegenden Konzepte der objektorientierten Programmierung zu erlernen und anzuwenden. Das Spiel ermöglicht es den Benutzern, Würfel zu rollen und verschiedene Kombinationen zu erzielen, ähnlich wie beim traditionellen Kniffel-Spiel.</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="fotos/kniffel1.png" alt="Kniffel Projekt Screenshot 1" class="p-2 projectpic img-fluid mb-2">
-                </div>
-                <div class="col-md-4">
-                    <img src="fotos/kniffel2.png" alt="Kniffel Projekt Screenshot 2" class="p-2 projectpic img-fluid mb-2">
-                </div>
-                <div class="col-md-4">
-                    <img src="fotos/kniffel3.png" alt="Kniffel Projekt Screenshot 3" class="p-2 projectpic img-fluid">
-                </div>
-            </div>
+            <p class="pt-4 px-4">Dieses Projekt ist eine C++-basierte Mitarbeiterdatenbank. Es wurde entwickelt, 
+                um die grundlegenden Konzepte der Datenverwaltung und -manipulation zu erlernen und anzuwenden. 
+                Die Datenbank ermöglicht es den Benutzern, Mitarbeiterdaten hinzuzufügen, zu bearbeiten und zu löschen sowie verschiedene 
+                Abfragen durchzuführen.</p>
         </div>
     </section>
-    <section>
+    <section class="row projekt-row mt-4">
+        <div class="col-md-12 p-4">
+            <h2 class="text-center" style="border-radius: 3px;">Webseite über Saugroboter</h2>
+            <p class="pt-4 px-4">Dieses Projekt ist eine Webseite über Saugroboter, die mit Flexbox und dem Float-Modell gestaltet wurde. 
+            Es wurde entwickelt, um die grundlegenden Konzepte der modernen Webentwicklung zu erlernen und anzuwenden. 
+            Die Webseite zeigt, wie man Layouts mit Flexbox und Float erstellt, um eine responsive und benutzerfreundliche Benutzeroberfläche zu erreichen.</p>
+            <div class="row">
+                    <div class="col-md-4 p-2">
+                        <div class="p-2" style="background-color: lightgray; border-radius: 4px;">
+                        <h4 class="text-center">Boxmodell</h4>
+                        <img src="fotos/roboter1.png" alt="Boxmodell Screenshot" class="p-2 projectpic img-fluid mb-2">
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-2">
+                        <div class="p-2" style="background-color: lightgray; border-radius: 4px;">
+                        <h4 class="text-center">Flexbox</h4>
+                        <img src="fotos/roboter2.png" alt="Kniffel Projekt Screenshot 2" class="p-2 projectpic img-fluid mb-2">
+                    </div>
+                    </div>
+                    <div class="col-md-4 p-2">
+                        <div class="p-2" style="background-color: lightgray; border-radius: 4px;">
+                        <h4 class="text-center">Grid</h4>
+                        <img src="fotos/roboter3.png" alt="Kniffel Projekt Screenshot 3" class="p-2 projectpic img-fluid">
+                    </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn btn-secondary" onclick="openPopup()">Zur Webseite</button>
+                </div>
+        </div>
         
+
+        <script>
+            function openPopup() {
+            window.open('Saugroboter/grid.html', 'popup', 'width=800,height=600');
+            }
+        </script>
     </section>
     <footer class="bg-light text-center py-3 mt-4">
         <p>&copy; 2024 Meine Website</p>
