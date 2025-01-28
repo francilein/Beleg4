@@ -8,9 +8,7 @@
   margin: 0 auto;
   padding: 0 1rem;
 }
-img{
-  border: #7da967 3px solid;
-}
+
 header {
   background-color: #7da967;
 }
@@ -75,5 +73,16 @@ section, div, .container {
   background-color: #9DC183;
 }
 .profil{
+  border-radius: 10px;
+}
+.hobbies-row, .projekt-row{
+  margin: 0;
+  padding: 0;
+}
+.col-md-4{
+  margin: 0;
+  padding: 0;
+}
+.projectpic{
   border-radius: 10px;
 }
