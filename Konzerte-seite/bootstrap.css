@@ -1,0 +1,98 @@
+body {
+    background-color: #B185A7;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+section{
+    background-color: #B185A7;
+}
+.hero {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center; /* Vertikale Zentrierung */
+    align-items: center;    /* Horizontale Zentrierung */
+    text-align: center;     /* Textausrichtung */
+    height: 100vh;
+    position: relative;
+    background: url('meine_collage.png') no-repeat center center/cover ;
+    text-align: center;
+}
+.herotext{
+    background-color: rgba(52, 58, 64, 0.7);
+    border-radius: 5px;
+}
+.navbar-brand:hover{
+    color: white!important;
+}
+.nav-link:hover {
+    color: white!important;
+    text-decoration: none !important;
+}
+.container{
+    background-color: #B185A7;
+    padding: 50px;
+}
+.headertext {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.concert-highlight a {
+    color: #FFF4E9; 
+    text-decoration: none;
+}
+a:hover {
+    color: #FFB2E6; /* Hellerer Ton */
+    text-decoration: underline;
+}
+.concert-highlight .col-md-6 {
+    margin-bottom: 1.5rem; /* Abstand zwischen Konzerten */
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+nav {
+    background-color: #8D6B94;
+}
+
+footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+.container{
+    padding-top: 10px;
+}
+#concertCarousel {
+    height: 500px; /* Feste Höhe für das Karussell */
+    overflow: hidden; /* Verhindert Überlauf */
+    display: flex;
+    align-items: center; /* Zentriert die Inhalte vertikal */
+}
+
+#concertCarousel img {
+    aspect-ratio: 4 / 3; /* Setzt ein festes Seitenverhältnis */
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none !important; /* Force removal of the default icon */
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+    content: '';
+    display: inline-block;
+    border: solid black; /* Black color for the arrow */
+    border-width: 0 4px 4px 0;
+    padding: 8px;
+}
+
+.carousel-control-prev-icon::after {
+    transform: rotate(135deg); /* Left arrow */
+}
+
+.carousel-control-next-icon::after {
+    transform: rotate(-45deg); /* Right arrow */
+}
