@@ -75,3 +75,8 @@ body {
         font-size: 0.9rem;
     }
 }
+#bildslay{
+    width: auto;
+    height: auto;
+    max-width: 80%px;
+}
