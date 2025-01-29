@@ -22,7 +22,6 @@ h1, h2 {
 
 /* 6.1 Klasse für Paragrafen */
 .paragraf {
-    font-family: 'Times New Roman', serif;
     padding: 10px;
 }
 
@@ -34,14 +33,17 @@ p {
 /* 7.2 Definition von Deckkraft */
 #p1 {
     opacity: 0.8;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #p2 {
     opacity: 0.6;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #p3 {
     opacity: 1;
+    font-family: 'Comic Sans MS', cursive;
 }
 
 /* 8.1 Schriftgröße in Pixel */
@@ -97,9 +99,7 @@ div {
 
 /* 9.3 Display-Eigenschaft */
 div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: block;
 }
 
 /* 10. Boxenparameter */
