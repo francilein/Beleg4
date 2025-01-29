@@ -1,0 +1,83 @@
+/* Allgemeine Stile */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0077cc;
+    color: white;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: url('hero.jpg') no-repeat center center/cover;
+    color: white;
+    height: 60vh;
+}
+
+.hero-text {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.grid-item {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #0077cc;
+    color: white;
+}
