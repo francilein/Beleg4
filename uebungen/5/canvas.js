@@ -1,4 +1,3 @@
-
 window.onload = function() {
     // Existing canvas code
     var canvas = document.getElementById('myCanvas');
@@ -11,15 +10,31 @@ window.onload = function() {
     var textCtx = textCanvas.getContext('2d');
     textCtx.font = '30px Arial';
     textCtx.fillText('This is a long text that will exceed the canvas boundaries', 10, 50);
-};
-const canvas = document.getElementById('meinCanvas');
-    const ctx = canvas.getContext('2d');
+
+    // Additional canvas code
+    var meinCanvas = document.getElementById('meinCanvas');
+    var meinCtx = meinCanvas.getContext('2d');
 
     // Rechteck zeichnen
-    ctx.fillStyle = 'blue';
-    ctx.fillRect(50, 50, 200, 150);
+    meinCtx.fillStyle = 'blue';
+    meinCtx.fillRect(50, 50, 200, 150);
 
     // Text hinzufügen
-    ctx.fillStyle = 'white';
-    ctx.font = '20px Arial';
-    ctx.fillText('Hallo, Canvas!', 100, 100);
+    meinCtx.fillStyle = 'white';
+    meinCtx.font = '20px Arial';
+    meinCtx.fillText('Hallo, Canvas!', 100, 100);
+
+    // HTMLImageElement erzeugen
+    var img = new Image();
+    img.src = 'https://via.placeholder.com/150';
+    img.onload = function() {
+        meinCtx.drawImage(img, 100, 200, 150, 150);
+
+        // Setzen der Quelle für das Element auf das von Ihnen in 3.1 gezeichnete Element
+        var newImg = new Image();
+        newImg.src = canvas.toDataURL();
+        newImg.onload = function() {
+            document.body.appendChild(newImg);
+        };
+    };
+};
