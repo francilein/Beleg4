@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Große Zahlen Berechnung</title>
+    <link rel="stylesheet" href="rechnen.css">
+    <script src="rechnen.js" defer></script>
+</head>
+<body>
+    <h1>Experiment mit großen Zahlen in JavaScript</h1>
+    <p>Die folgende Zahl wird berechnet:</p>
+    <div id="bigNumber"></div>
+
+    <p id="countdown">Berechnung läuft...</p>
+    <button onclick="startCalculation()">Berechnung starten</button>
+
+    <div id="output"></div>
+    <p>Gib eine Zahl ein:</p>
+    <input type="number" id="userInput" placeholder="Zahl eingeben">
+    <button onclick="processInput()">Eingabe verarbeiten</button>
+    <div id="inputResult"></div>
+</body>
+</html>
