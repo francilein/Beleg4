@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop Beispiel</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h2>Drag & Drop Beispiel</h2>
+    <div class="container">
+        <img src="theater.webp" id="image" alt="draggable" class="draggable" draggable="true">
+        <div class="dropzone" id="dropzone1">Drop Here</div>
+    </div>
+    <h2>Drag & Drop Aufgaben</h2>
+    <div class="task-input">
+        <input type="text" id="taskText" placeholder="Aufgabe eingeben">
+        <input type="color" id="taskColor">
+        <button id="addTask">Aufgabe hinzufügen</button>
+    </div>
+    <div class="container">
+        <div class="dropzone" id="todo">ToDo</div>
+        <div class="dropzone" id="wip">WIP</div>
+        <div class="dropzone" id="done">Done</div>
+        <div class="dropzone" id="trash">Trash</div>
+    </div>
+    
+    <script src="dragndrop.js"></script>
+</body>
+</html>
