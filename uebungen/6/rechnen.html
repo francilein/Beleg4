@@ -3,22 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Große Zahlen Berechnung</title>
     <link rel="stylesheet" href="rechnen.css">
-    <script src="rechnen.js" defer></script>
+    <title>Summe Berechnung</title>
 </head>
 <body>
-    <h1>Experiment mit großen Zahlen in JavaScript</h1>
-    <p>Die folgende Zahl wird berechnet:</p>
-    <div id="bigNumber"></div>
-
-    <p id="countdown">Berechnung läuft...</p>
-    <button onclick="startCalculation()">Berechnung starten</button>
-
-    <div id="output"></div>
-    <p>Gib eine Zahl ein:</p>
-    <input type="number" id="userInput" placeholder="Zahl eingeben">
-    <button onclick="processInput()">Eingabe verarbeiten</button>
-    <div id="inputResult"></div>
+    <h1>Summe Berechnen</h1>
+    <button onclick="berechneSumme()">Berechnen</button>
+    <p><br></p>
+    <button id="kitty">slayyyyy</button>
+    <p><br></p>
+    <img id="bild" src="../4/mumsy.webp" alt="Ein Bild" style="display: block;">
+    <p><br></p>
+    <p id="ergebnis">Man kann während der Berechnung keine anderen Interaktionen vornehmen. Nach der Berechnung werden die während der Berechnung gemachten Sachen ausgeführt.</p>
+    
+    <script>
+        let webworker = null;
+    
+        function initWorker() {
+            if (window.Worker) {
+                webworker = new Worker("rechnen.js");
+    
+                webworker.onmessage = function(event) {
+                    document.getElementById("ergebnis").textContent = "Ergebnis: " + event.data;
+                };
+    
+                webworker.onerror = function(error) {
+                    console.error("Worker-Fehler:", error);
+                    document.getElementById("ergebnis").textContent = "Fehler: " + error.message;
+                };
+            } else {
+                console.error("Web Worker werden nicht unterstützt.");
+                document.getElementById("ergebnis").textContent = "Web Worker werden nicht unterstützt.";
+            }
+        }
+    
+        function berechneSumme() {
+            if (!webworker) {
+                initWorker();
+            }
+            document.getElementById("ergebnis").textContent = "Berechnung läuft...";
+            webworker.postMessage("start");
+        }
+    
+        window.onload = initWorker;
+    </script>
+    
+    
+    <script src="kitty.js"></script>
 </body>
 </html>

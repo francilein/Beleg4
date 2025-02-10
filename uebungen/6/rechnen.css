@@ -9,3 +9,9 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
+#bild{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 200px;
+    height: auto;
+}
