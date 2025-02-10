@@ -50,5 +50,42 @@
     
     
     <script src="kitty.js"></script>
+    <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort mit Web Worker</title>
+</head>
+<body>
+    <h1>Selection Sort mit Web Worker</h1>
+    <button onclick="startSorting()">Sortiere Array</button>
+    <p id="status">Warte auf Start...</p>
+    <p id="progress">Fortschritt: 0%</p>
+    <p id="result"></p>
+
+    <script>
+        let worker = new Worker("worker.js");
+
+        worker.onmessage = function(event) {
+            if (event.data.progress !== undefined) {
+                document.getElementById("progress").textContent = "Fortschritt: " + event.data.progress.toFixed(2) + "%";
+            }
+            if (event.data.result) {
+                document.getElementById("status").textContent = "Sortierung abgeschlossen!";
+                document.getElementById("result").textContent = "Sortiertes Array (erste 20 Elemente): " + event.data.result.slice(0, 20).join(", ");
+            }
+        };
+
+        function startSorting() {
+            document.getElementById("status").textContent = "Sortierung läuft...";
+            let array = Array.from({length: 50000}, () => Math.floor(Math.random() * 100000));
+            worker.postMessage(array);
+        }
+    </script>
+<p>ich habe den code von https://dobsondev.com/2015/05/29/web-workers-demo/ raus genommen da mein worker sonst nicht mehr funktioniert.</p>
+</body>
+</html>
+
 </body>
 </html>
