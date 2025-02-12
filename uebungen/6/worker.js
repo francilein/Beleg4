@@ -1,15 +1,26 @@
-// worker.js
-onmessage = function(e) {
-    let bigNumber = 1e+100; // Große Zahl
-    let countdown = 10; // Beispiel: 10 Sekunden Countdown
-    let interval = setInterval(() => {
-        countdown--;
-        postMessage({ countdown });
+self.onmessage = function(event) {
+    var array = event.data;
+    var n = array.length;
 
-        if (countdown <= 0) {
-            clearInterval(interval);
-            bigNumber *= 1.0001; // Beispielberechnung
-            postMessage({ result: bigNumber.toExponential() }); // Berechnung abgeschlossen
+    for (var i = 0; i < n - 1; i++) {
+        var minIndex = i;
+        for (var j = i + 1; j < n; j++) {
+            if (array[j] < array[minIndex]) {
+                minIndex = j;
+            }
         }
-    }, 1000);
-}
+        if (minIndex !== i) {
+            var temp = array[i];
+            array[i] = array[minIndex];
+            array[minIndex] = temp;
+        }
+        // Fortschritt zurückmelden (optional)
+        if (i % 100 === 0) {
+            self.postMessage({ progress: (i / n) * 100 });
+        }
+    }
+
+    // Sortiertes Array zurücksenden
+    self.postMessage({ progress: 100, result: array });
+    self.close();
+};
