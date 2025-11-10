@@ -1,1 +1,189 @@
-* {margin: 0;padding: 0;box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;}.container {margin: 0 auto;padding: 0 1rem;}header {background-color: #7da967;}nav {background-color: #e0e9dc;}#left {padding: 0;background-color: #c7d3bf;}#right {padding: 0;background-color: #b7cdb2;}h2 {background-color: #9DC183;padding: 1%;margin: 0;}section, div, .container {margin: 0;padding: 0;}.timeline {border-left: 1px solid hsl(0, 0%, 90%);position: relative;list-style: none;margin: 1rem;padding-left: 2rem;}.timeline .timeline-item {position: relative;}.timeline .timeline-item:after {position: absolute;display: block;top: 0;}.timeline .timeline-item:after {background-color: hsl(0, 0%, 90%);left: -38px;border-radius: 50%;height: 11px;width: 11px;content: "";}.hobbies{background-color: #FFC0CB;}.card-header{background-color: #9DC183;}.profil{border-radius: 10px;}.hobbies-row, .projekt-row{margin: 0;padding: 0;}.col-md-4{margin: 0;padding: 0;}.projectpic{border-radius: 10px;}
+/* ===== Franca Lenz Portfolio – Creative Tech Mint Style ===== */
+:root {
+  --mint-light: #E8FDF6;
+  --mint: #9DE7C2;
+  --mint-dark: #78C5A7;
+  --text-dark: #1A3C34;
+  --white: #ffffff;
+  --shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, var(--mint-light) 0%, var(--white) 100%);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+  position: relative;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, var(--mint) 0%, var(--mint-dark) 100%);
+  color: var(--white);
+  overflow: hidden;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+  filter: blur(60px);
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: var(--shadow);
+}
+
+.nav-brand {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--mint-dark);
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  display: none;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: rgba(255,255,255,0.95);
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    box-shadow: var(--shadow);
+    padding: 1rem 0;
+  }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: block; }
+}
+
+/* ===== Grids ===== */
+.about-container, .projects-grid, .hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.profile-card, .about-main, .project-card, .hobby-card {
+  background: rgba(255,255,255,0.7);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover, .about-main:hover, .project-card:hover, .hobby-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3 {
+  font-family: 'Space Mono', monospace;
+  color: var(--text-dark);
+}
+
+a {
+  color: var(--text-dark);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+a:hover { color: var(--mint-dark); }
+
+.btn {
+  display: inline-block;
+  background: var(--mint);
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn:hover { background: var(--mint-dark); }
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-dark);
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Card-List im linken Bereich */
+.education-list li {
+  background: rgba(255,255,255,0.8);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  list-style: none;
+}
+.education-list li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
