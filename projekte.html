@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meine Projekte | Franca Lenz</title>
   <link rel="stylesheet" href="franca.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-  <header><h1>Meine Projekte</h1></header>
+  <header>
+    <h1>Meine Projekte</h1>
+  </header>
   <nav class="navbar">
-    <div class="nav-brand">Portfolio</div>
+<a href="../index.html" class="nav-brand" style="text-decoration: none;">Franca Lenz</a>
     <button class="nav-toggle" aria-label="Menü öffnen">&#9776;</button>
     <ul class="nav-links">
       <li><a href="index.html">Über mich</a></li>
@@ -18,15 +24,29 @@
     </ul>
   </nav>
   <main class="projects-grid">
-    <div class="project-card"><h3>Kniffelspiel in Java</h3><p>Ein Java-Spiel, das Objektorientierung und Teamarbeit fördert.</p></div>
-    <div class="project-card"><h3>Konzertseite</h3><p>Webseite über meine Konzertbesuche – erstellt mit HTML, CSS & JS.</p></div>
-    <div class="project-card"><h3>Saugroboter-Webseite</h3><p>Ein Projekt zum Üben von Flexbox und CSS Grid.</p></div>
+    <a href="kniffel/kniffel.html" target="_blank"
+      rel="noopener noreferrer" class="project-card">
+      <h3>Kniffelspiel in Java</h3>
+      <p>Ein Java-Spiel, das Objektorientierung und Teamarbeit fördert.</p>
+    </a><a href="Konzerte-seite/konzert.html" target="_blank"
+      rel="noopener noreferrer" class="project-card">
+      <h3>Konzertseite</h3>
+      <p>Webseite über meine Konzertbesuche – erstellt mit HTML, CSS & JS.</p>
+    </a>
+     </a><a href="Saugroboter/Flexbox.html" target="_blank"
+      rel="noopener noreferrer" class="project-card">
+      <h3>Saugroboter-Webseite</h3>
+      <p>Ein Projekt zum Üben von Flexbox und CSS Grid.</p>
+    </a>
   </main>
-  <footer><p>&copy; 2024 Franca Lenz – Medieninformatik-Studentin</p></footer>
+  <footer>
+    <p>&copy; 2025 Franca Lenz – Medieninformatik-Studentin</p>
+  </footer>
   <script>
-    const toggle=document.querySelector('.nav-toggle');
-    const links=document.querySelector('.nav-links');
-    toggle.addEventListener('click',()=>links.classList.toggle('open'));
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
   </script>
 </body>
+
 </html>

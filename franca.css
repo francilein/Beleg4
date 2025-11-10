@@ -25,10 +25,11 @@ body {
 header {
   position: relative;
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 1rem;
   background: linear-gradient(135deg, var(--mint) 0%, var(--mint-dark) 100%);
   color: var(--white);
   overflow: hidden;
+  max-height: 140px;
 }
 
 header::after {
