@@ -124,6 +124,7 @@ header::after {
   backdrop-filter: blur(10px);
   padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
 }
 
 .profile-card:hover, .about-main:hover, .project-card:hover, .hobby-card:hover {
