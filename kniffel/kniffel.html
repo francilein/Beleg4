@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kniffel — Projekt</title>
+    <link rel="stylesheet" href="../franca.css">
+    <style>
+        /* Kleine Ergänzungen nur für die Galerie */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .gallery-item {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .caption {
+            padding: 0.6rem 0.8rem;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 1.2rem auto;
+            padding: 0 1rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 0.6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Kniffel — Mein Projekt</h1>
+    </header>
+
+    <nav class="navbar">
+        <a href="../index.html" class="nav-brand" style="text-decoration: none;">Franca Lenz</a>
+        <button class="nav-toggle" aria-label="Menü öffnen">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="../index.html">Über mich</a></li>
+            <li><a href="../projekte.html" class="active">Meine Projekte</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section>
+            <h2>Über das Kniffel-Projekt</h2>
+            <p>Dies ist meine Umsetzung des bekannten Würfelspiels Kniffel als Java Software. Unten findest du Bilder
+                aus dem Entwicklungs- und Designprozess sowie Screenshots der fertigen Applikation.</p>
+        </section>
+
+        <section>
+            <h2>Galerie</h2>
+            <div class="gallery" aria-label="Kniffel Bildergalerie">
+                <figure class="gallery-item">
+                    <img src="../fotos/kniffel1.png" alt="Screenshot: Spieloberfläche Kniffel" loading="lazy">
+                    <figcaption class="caption">Startseite</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../fotos/kniffel2.png" alt="Entwurf: Mobile Ansicht des Kniffel-Spiels" loading="lazy">
+                    <figcaption class="caption">Spieleranzahl auswahl</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../fotos/kniffel3.png" alt="Entwicklung: Logik und Bewertungsskala" loading="lazy">
+                    <figcaption class="caption">Spieloberfläche mit Punktestand und Würfeln</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section></section>
+        <h2>Details & Technologien</h2>
+        <ul>
+            <li>Java</li>
+            <li>Objektorientierte Programmierung</li>
+            <li>Grafische Benutzeroberfläche mit swing</li>
+        </ul>
+        </section>
+
+        <a class="back-link" href="../projekte.html">← Zurück zu meinen Projekten</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Franca Lenz</p>
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const links = document.querySelector('.nav-links');
+        if (toggle && links) toggle.addEventListener('click', () => links.classList.toggle('open'));
+    </script>
+</body>
+
+</html>
